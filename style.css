@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+    font-family: 'Comfortaa', cursive;
+    color: #212121;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.gerenalarea {
+    position: relative;
+    width: 100%;
+}
+
+.slide-pages {
+    min-height: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 9%;
+    padding-bottom: 70px;
+}
+
+.contentproje {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 350px;
+    width: 100%;
+    height: 100%;
+    animation: slideContent .4s linear .4s backwards;
+}
+
+@keyframes slideContent {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+
+.tittle {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 8%;
+    font-size: 300%;
+    color: #ff0000;
+    font-family: 'Comfortaa', cursive;
+}
+
+.description {
+    font-size: 25px;
+    color: #ffffff;
+    font-family: 'Comfortaa', cursive;
+    width: 50%;
+    height: 10%;
+    padding-bottom: 5%;
+
+}
+
+.acessinsta {
+    background: #000a6150;
+    font-size: 17px;
+    padding: 9px 40px;
+    border-radius: 15px;
+    color: #000a61;
+    border: 3px solid #000a61;
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+}
+
+.acessinsta:hover {
+    background: #000a61;
+    color: #ffffff;
+}
+
+.specificarea {
+    display: none;
+}
+
+.specificarea.active {
+    display: block;
+}
+
+.specificarea:nth-child(1) .slide-pages {
+    background-image: url(./images/01.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.specificarea:nth-child(2) .slide-pages {
+    background-image: url(./images/02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.specificarea:nth-child(3) .slide-pages {
+    background-image: url(./images/03.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.specificarea:nth-child(4) .slide-pages {
+    background-image: url(./images/04.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.specificarea:nth-child(5) .slide-pages {
+    background-image: url(./images/05.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide-pages {
+    width: 100%;
+}
+
+.btn-nav {
+    width: 100%;
+    height: 100%;
+}
+
+.navegation-next {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    color: #ffffff;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    height: 100%;
+    line-height: 50px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.navegation-prox {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    top: 0%;
+    left: 90%;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    height: 100%;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.navegation-prox:hover {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    transition: 0.5s ease;
+}
+
+.navegation-next:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    transition: 0.5s ease;
+}
+
+
+
+@media(max-width: 500px) {
+
+    .description {
+        font-size: 16px;
+        color: #ffffff;
+        font-family: 'Comfortaa', cursive;
+        width: 70%;
+        height: 10%;
+
+    }
+}
+
+/*   AREA DE BAIXAMENTO   */
+
+.downloadspace {
+    height: 600px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: url(./images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.downloadarea {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 588px) {
+    .downloadarea {
+        width: 90%;
+    }
+}
+
+.cartao {
+    width: 100%;
+    max-width: 500px;
+    height: 50%;
+    max-height: 250px;
+
+    background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+.cartao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+    transition: 0.5s ease;
+}
+
+.def:hover {
+    transform: scale(1.11);
+    box-shadow: -7px 4px 28px -3px #b527cf;
+    border-radius: 10px;
+}
+
+.def::before {
+    background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%);
+    border-radius: 10px;
+}
+
+.tittled {
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+.tittled h2{
+    font-size: 200%;
+}
+
+.areabtn {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.media-btn {
+    height: 40%;
+    width: 70%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+
+    background-color: #0a1b2d;
+    border-radius: 100px;
+}
+.media-btn:hover{
+    background: #0b6be9;
+    transition: background 0.3s;
+}
+
+.mega-btn {
+    height: 40%;
+    width: 70%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+
+    background-color: #0a1b2d;
+    border-radius: 100px;
+}
+.mega-btn:hover {
+    background: #e90b0b;
+    transition: background 0.3s;
+}
+
+.acess {
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    font-size: 120%;
+    color: #ffffff90;
+    text-decoration: none;
+    text-align: center;
+}
